@@ -212,34 +212,6 @@ The dashboard acts as the central hub for accessing calculators, AI-powered util
 
 ---
 
-# Project Structure
-
-```
-ToolBizz
-│
-├── assets/
-│   ├── dashboard.png
-│   └── architecture.png
-│
-├── css/
-│
-├── js/
-│
-├── images/
-│
-├── tools/
-│
-├── blog/
-│
-├── index.html
-│
-├── privacy.html
-│
-├── terms.html
-│
-└── netlify.toml
-```
-
 The project follows a modular structure that separates business logic, user interface, assets, and utility components, making the codebase easier to maintain and extend as new tools are added.
 
 ---
