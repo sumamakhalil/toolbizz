@@ -204,6 +204,10 @@ flowchart TD
 
 ![Dashboard](assets/dashboard.png)
 
+## Tools
+
+![Tools](assets/tools.png)
+
 The dashboard acts as the central hub for accessing calculators, AI-powered utilities, invoice generation, and premium business tools.
 
 ---
