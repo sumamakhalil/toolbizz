@@ -148,55 +148,54 @@ This minimizes server dependency while improving trust and application responsiv
 
 ![Architecture](assets/architecture.png)
 
-## System Architecture
-
 ```mermaid
-flowchart LR
+flowchart TD
 
-    User((User))
+    U[User]
 
-    User --> Frontend
+    A[ToolBizz Web Application<br/>HTML5 • CSS3 • Vanilla JavaScript]
 
-    subgraph Client["Client Application"]
-        Frontend[HTML5 + CSS3 + Vanilla JavaScript]
+    B[Business Tool Engine]
+    C[jsPDF Generator]
+    D[Firebase Authentication]
+    E[Kie.ai AI Services]
 
-        Auth[Firebase Authentication]
+    F[Google OAuth]
+    G[Instant PDF Export]
+    H[Business Calculators]
+    I[AI Image & Video Generation]
 
-        Tools[Business Tool Engine]
+    J[Lemon Squeezy]
+    K[Pro Subscription]
 
-        PDF[jsPDF]
+    L[Netlify Deployment]
 
-        UI[Responsive UI]
+    M[SEO Landing Pages]
+    N[JSON-LD Schema]
+    O[Robots.txt & Sitemap]
 
-        Frontend --> Auth
-        Frontend --> Tools
-        Frontend --> PDF
-        Frontend --> UI
-    end
+    U --> A
 
-    subgraph External["External Services"]
+    A --> B
+    A --> C
+    A --> D
+    A --> E
 
-        Google[Google OAuth]
+    B --> H
+    C --> G
 
-        Kie[Kie.ai]
+    D --> F
 
-        Lemon[Lemon Squeezy]
+    E --> I
 
-    end
+    A --> J
+    J --> K
 
-    Auth --> Google
+    A --> L
 
-    Tools --> Kie
-
-    Frontend --> Lemon
-
-    PDF --> Download[PDF Generation]
-
-    Download --> User
-
-    Kie --> User
-
-    Lemon --> User
+    A --> M
+    M --> N
+    M --> O
 ```
 
 # Screenshots
