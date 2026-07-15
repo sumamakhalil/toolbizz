@@ -128,7 +128,7 @@ This minimizes server dependency while improving trust and application responsiv
 ---
 
 
-# Technology Stack
+# Tech Stack
 
 | Layer | Technology |
 |--------|------------|
