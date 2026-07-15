@@ -424,11 +424,11 @@ https://github.com/sumamakhalil
 
 **LinkedIn**
 
-(Add your LinkedIn profile)
+https://www.linkedin.com/in/muhammad-sumama-khalil/
 
 **Email**
 
-(Add your professional email)
+somamakhalil212@gmail.com
 
 ---
 
