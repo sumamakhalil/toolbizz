@@ -35,20 +35,22 @@ Beyond the product itself, ToolBizz was engineered around scalability, performan
 
 ## Table of Contents
 
-- Executive Summary
-- Key Features
-- Technology Stack
-- System Architecture
-- Screenshots
-- Engineering Challenges
-- Performance Optimizations
-- SEO Strategy
-- Business Model
-- Project Structure
-- Lessons Learned
-- Future Improvements
-- Source Code
-- Contact
+- [Executive Summary](#executive-summary)
+- [Live Demo](#live-demo)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [System Architecture](#system-architecture)
+- [Screenshots](#screenshots)
+- [Project Structure](#project-structure)
+- [Engineering Challenges](#engineering-challenges)
+- [Performance Optimizations](#performance-optimizations)
+- [SEO Strategy](#seo-strategy)
+- [Business Model](#business-model)
+- [Lessons Learned](#lessons-learned)
+- [Future Improvements](#future-improvements)
+- [Source Code](#source-code)
+- [About the Developer](#about-the-developer)
+- [Contact](#contact)
 
 ---
 
@@ -146,30 +148,56 @@ This minimizes server dependency while improving trust and application responsiv
 
 ![Architecture](assets/architecture.png)
 
-## High-Level Architecture
+## System Architecture
 
+```mermaid
+flowchart LR
+
+    User((User))
+
+    User --> Frontend
+
+    subgraph Client["Client Application"]
+        Frontend[HTML5 + CSS3 + Vanilla JavaScript]
+
+        Auth[Firebase Authentication]
+
+        Tools[Business Tool Engine]
+
+        PDF[jsPDF]
+
+        UI[Responsive UI]
+
+        Frontend --> Auth
+        Frontend --> Tools
+        Frontend --> PDF
+        Frontend --> UI
+    end
+
+    subgraph External["External Services"]
+
+        Google[Google OAuth]
+
+        Kie[Kie.ai]
+
+        Lemon[Lemon Squeezy]
+
+    end
+
+    Auth --> Google
+
+    Tools --> Kie
+
+    Frontend --> Lemon
+
+    PDF --> Download[PDF Generation]
+
+    Download --> User
+
+    Kie --> User
+
+    Lemon --> User
 ```
-                   User
-                     │
-                     ▼
-          HTML / CSS / JavaScript
-                     │
-      ┌──────────────┼──────────────┐
-      ▼              ▼              ▼
- Firebase Auth   Business Tools   AI Services
-      │              │              │
-      ▼              ▼              ▼
- Authentication  jsPDF Engine   Kie.ai APIs
-                     │
-                     ▼
-             Lemon Squeezy Billing
-```
-
-The application follows a lightweight client-side architecture where the majority of business logic executes directly inside the browser.
-
-This design minimizes infrastructure costs, improves response times, reduces backend complexity, and creates a fast user experience.
-
----
 
 # Screenshots
 
