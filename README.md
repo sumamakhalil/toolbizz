@@ -124,3 +124,91 @@ Since most tools execute entirely inside the browser, user-generated documents r
 This minimizes server dependency while improving trust and application responsiveness.
 
 ---
+
+
+# Technology Stack
+
+| Layer | Technology |
+|--------|------------|
+| Frontend | HTML5 |
+| Styling | CSS3 |
+| Programming Language | Vanilla JavaScript (ES6) |
+| Authentication | Firebase Authentication |
+| AI Integration | Kie.ai (Flux-Pro) |
+| PDF Generation | jsPDF |
+| Payments | Lemon Squeezy |
+| Deployment | Netlify |
+| Architecture | Client-Side Serverless |
+
+---
+
+# System Architecture
+
+![Architecture](assets/architecture.png)
+
+## High-Level Architecture
+
+```
+                   User
+                     │
+                     ▼
+          HTML / CSS / JavaScript
+                     │
+      ┌──────────────┼──────────────┐
+      ▼              ▼              ▼
+ Firebase Auth   Business Tools   AI Services
+      │              │              │
+      ▼              ▼              ▼
+ Authentication  jsPDF Engine   Kie.ai APIs
+                     │
+                     ▼
+             Lemon Squeezy Billing
+```
+
+The application follows a lightweight client-side architecture where the majority of business logic executes directly inside the browser.
+
+This design minimizes infrastructure costs, improves response times, reduces backend complexity, and creates a fast user experience.
+
+---
+
+# Screenshots
+
+## Dashboard
+
+![Dashboard](assets/dashboard.png)
+
+The dashboard acts as the central hub for accessing calculators, AI-powered utilities, invoice generation, and premium business tools.
+
+---
+
+# Project Structure
+
+```
+ToolBizz
+│
+├── assets/
+│   ├── dashboard.png
+│   └── architecture.png
+│
+├── css/
+│
+├── js/
+│
+├── images/
+│
+├── tools/
+│
+├── blog/
+│
+├── index.html
+│
+├── privacy.html
+│
+├── terms.html
+│
+└── netlify.toml
+```
+
+The project follows a modular structure that separates business logic, user interface, assets, and utility components, making the codebase easier to maintain and extend as new tools are added.
+
+---
